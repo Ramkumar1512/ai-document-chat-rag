@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+.env
+venv
+
+# Django
+db.sqlite3
+
+# Vector database
+vector_store/
+
+# Uploaded documents
+documents/
+
+# MacOS
+.DS_Store
