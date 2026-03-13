@@ -3,9 +3,9 @@ import requests
 
 API_URL = "http://127.0.0.1:8000/api"
 
-st.set_page_config(page_title="AI Document Chat", layout="wide")
+st.set_page_config(page_title="Ram AI Document Chat", layout="wide")
 
-st.title("📄 AI Document Chat")
+st.title("📄 Ram AI Document Chat")
 st.write("Upload a PDF and ask questions about it.")
 
 # Session state for chat history
@@ -58,3 +58,9 @@ for msg in st.session_state.messages:
     else:
         with st.chat_message("assistant"):
             st.write(msg["content"])
+
+
+
+#              $ xcode-select --install
+#   $ pip install watchdog
+# streamlit run rag_frontend/app.py

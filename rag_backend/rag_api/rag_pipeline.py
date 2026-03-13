@@ -1,6 +1,6 @@
 import os
 import re
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
@@ -17,7 +17,7 @@ embedding_model = HuggingFaceEmbeddings(
 
 generator = pipeline(
     "text2text-generation",
-    model="google/flan-t5-large",
+    model="google/flan-t5-base",
     max_length=200
 )
 
