@@ -2,5 +2,5 @@ services:
   - type: web
     name: rag-backend
     runtime: python
-    buildCommand: "pip install -r backend/requirements.txt"
-    startCommand: "python backend/manage.py runserver 0.0.0.0:10000"
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn rag_backend.rag_backend.wsgi:application --bind 0.0.0.0:$PORT"
